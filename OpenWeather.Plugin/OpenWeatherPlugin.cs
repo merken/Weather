@@ -17,8 +17,8 @@ namespace OpenWeather.Plugin
         [PluginService(ServiceType = typeof(IOpenWeatherService))]
         private readonly IOpenWeatherService openWeatherService;
 
-        [PluginService(ServiceType = typeof(IConverter))]
-        private readonly IConverter converter;
+        [PluginService(ServiceType = typeof(IConverterService))]
+        private readonly IConverterService converter;
 
         // The Contract method we need to implement
         public async Task<IEnumerable<WeatherForecast>> GetWeatherFor(string location)
