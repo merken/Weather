@@ -16,10 +16,11 @@ namespace OpenWeather.Plugin.Services
     {
         private readonly HttpClient client;
         private readonly string forecastApiFormat;
-        public OpenWeatherService(HttpClient client, IConfigurationService configurationService)
+        
+        public OpenWeatherService(HttpClient client)
         {
             this.client = client;
-            var apiKey = configurationService.GetConfigurationValueForKey("OpenWeather:Key");
+            var apiKey = "fd1f28913df6e270e48ea04536e3daba";
             this.forecastApiFormat = "forecast?q={0}&appid=" + apiKey;
         }
 

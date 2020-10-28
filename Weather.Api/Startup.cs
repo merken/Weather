@@ -28,7 +28,6 @@ namespace Weather.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<IConfigurationService,AppSettingsConfigurationService>();
             services.AddPrise();
         }
 

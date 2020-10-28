@@ -23,13 +23,11 @@ namespace Weather.Api.Controllers
         private readonly ILogger<WeatherForecastController> _logger;
         // Inject the Prise Default IPluginLoader
         private readonly IPluginLoader weatherPluginLoader;
-        private readonly IConfigurationService configurationService;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IPluginLoader weatherPluginLoader, IConfigurationService configurationService)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IPluginLoader weatherPluginLoader)
         {
             _logger = logger;
             this.weatherPluginLoader = weatherPluginLoader;
-            this.configurationService = configurationService;
         }
 
         // Add the location parameter to the route
@@ -50,11 +48,7 @@ namespace Weather.Api.Controllers
             }
 
             // Load the IWeatherPlugin
-            var plugin = await this.weatherPluginLoader.LoadPlugin<IWeatherPlugin>(scanResult, configure: (loadContext) =>
-            {
-                // Share the IConfigurationService
-                loadContext.AddHostService<IConfigurationService>(this.configurationService);
-            });
+            var plugin = await this.weatherPluginLoader.LoadPlugin<IWeatherPlugin>(scanResult);
 
             // Invoke the IWeatherPlugin
             return await plugin.GetWeatherFor(location);
