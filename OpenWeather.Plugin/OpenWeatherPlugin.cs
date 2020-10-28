@@ -14,11 +14,11 @@ namespace OpenWeather.Plugin
     [Plugin(PluginType = typeof(IWeatherPlugin))]
     public class OpenWeatherPlugin : IWeatherPlugin
     {
-        // This tells Prise to inject service from the IPluginBootstrapper IServiceCollection
+        // This tells Prise to inject a service from the IPluginBootstrapper IServiceCollection
         [PluginService(ServiceType = typeof(IOpenWeatherService))]
         private readonly IOpenWeatherService openWeatherService;
 
-        // This tells Prise to inject service from the IPluginBootstrapper IServiceCollection
+        // This tells Prise to inject a service from the IPluginBootstrapper IServiceCollection
         [PluginService(ServiceType = typeof(IConverterService))]
         private readonly IConverterService converter;
 
