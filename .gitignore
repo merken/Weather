@@ -1,5 +1,7 @@
 bin
 obj
-_dist
 .vscode
 .DS_Store
+_dist/*.dll
+_dist/*.pdb
+_dist/*.json
