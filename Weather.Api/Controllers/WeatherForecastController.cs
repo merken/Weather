@@ -23,6 +23,7 @@ namespace Weather.Api.Controllers
         private readonly ILogger<WeatherForecastController> _logger;
         // Inject the Prise Default IPluginLoader
         private readonly IPluginLoader weatherPluginLoader;
+        // Inject the AppSettingsConfigurationService
         private readonly IConfigurationService configurationService;
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger, IPluginLoader weatherPluginLoader, IConfigurationService configurationService)

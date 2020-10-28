@@ -16,10 +16,5 @@ namespace Weather.Api
         {
             return this.configuration[key];
         }
-
-        public string[] GetConfigurationValuesForKey(string key)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

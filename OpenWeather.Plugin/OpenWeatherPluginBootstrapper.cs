@@ -10,7 +10,10 @@ namespace OpenWeather.Plugin
     [PluginBootstrapper(PluginType = typeof(OpenWeatherPlugin))]
     public class OpenWeatherPluginBootstrapper : IPluginBootstrapper
     {
-        [BootstrapperService(ServiceType = typeof(IConfigurationService), ProxyType = typeof(ConfigurationServiceProxy))]
+        // Add a BootstrapperService
+        [BootstrapperService(
+            ServiceType = typeof(IConfigurationService), // The Weather.Contract.IConfigurationService interface
+            ProxyType = typeof(ConfigurationServiceProxy))] // The ReverseProxy type that lives inside of this project
         private readonly IConfigurationService configurationService;
 
         public IServiceCollection Bootstrap(IServiceCollection services)
@@ -18,6 +21,7 @@ namespace OpenWeather.Plugin
             services.AddScoped<HttpClient>(sp =>
             {
                 var client = new HttpClient();
+                // Use the IConfigurationService here
                 var endpoint = this.configurationService.GetConfigurationValueForKey("OpenWeather:Endpoint");
                 client.BaseAddress = new Uri(endpoint);
                 return client;
