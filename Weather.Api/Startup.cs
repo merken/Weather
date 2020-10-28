@@ -29,7 +29,7 @@ namespace Weather.Api
         {
             services.AddControllers();
             services.AddScoped<IConfigurationService, AppSettingsConfigurationService>();
-            services.AddPrise();
+            services.AddPriseNugetPackages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
