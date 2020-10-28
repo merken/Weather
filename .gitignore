@@ -5,3 +5,4 @@ obj
 _dist/*.dll
 _dist/*.pdb
 _dist/*.json
+_dist/*.nupkg
