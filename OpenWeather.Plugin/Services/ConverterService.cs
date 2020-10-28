@@ -24,16 +24,16 @@ namespace OpenWeather.Plugin.Services
             => (int)(kelvin - 273.15m);
     }
     
-    internal interface IConverter
+    internal interface IConverterService
     {
         IEnumerable<WeatherForecast> ConvertToWeatherForecasts(OpenWeatherResponseModel responseModel);
     }
 
-    internal class Converter : IConverter
+    internal class ConverterService : IConverterService
     {
         private readonly IMapper mapper;
 
-        public Converter()
+        public ConverterService()
         {
             this.mapper = new MapperConfiguration(cfg => cfg.AddProfile<WeatherForecastMapperProfile>()).CreateMapper();
         }

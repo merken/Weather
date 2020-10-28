@@ -25,7 +25,7 @@ namespace OpenWeather.Plugin
 
             services.AddScoped<IConfigurationService>(sp => this.configurationService);
             services.AddScoped<IOpenWeatherService, OpenWeatherService>();
-            services.AddScoped<IConverter, Converter>();
+            services.AddScoped<IConverterService, ConverterService>();
 
             return services;
         }
