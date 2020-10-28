@@ -11,7 +11,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Prise.DependencyInjection;
-using Weather.Contract;
 
 namespace Weather.Api
 {
@@ -28,7 +27,6 @@ namespace Weather.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<IConfigurationService,AppSettingsConfigurationService>();
             services.AddPrise();
         }
 
