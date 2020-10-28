@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace OpenWeather.Plugin.Models
 {
-    class OpenWeatherModel
+    public class OpenWeatherModel
     {
         // Day of the week
         public long dt { get; set; }

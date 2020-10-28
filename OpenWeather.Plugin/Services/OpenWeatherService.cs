@@ -7,7 +7,7 @@ using Weather.Contract;
 
 namespace OpenWeather.Plugin.Services
 {
-    internal interface IOpenWeatherService
+    public interface IOpenWeatherService
     {
         Task<OpenWeatherResponseModel> GetForecastsFor(string location);
     }
