@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prise.Plugin" Version="2.0.0-beta7" />
+    <PackageReference Include="Prise.ReverseProxy" Version="2.0.0-beta7" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Weather.Contract\Weather.Contract.csproj" />
+  </ItemGroup>
+
+</Project>

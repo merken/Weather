@@ -1,0 +1,6 @@
+{
+	"publishDir": "../_dist",
+	"configuration": "Debug",
+	"nuspecFile": null,
+	"includeProjectNameInPublishDir": false
+}
