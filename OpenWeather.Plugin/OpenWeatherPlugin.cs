@@ -20,6 +20,14 @@ namespace OpenWeather.Plugin
         [PluginService(ServiceType = typeof(IConverterService))]
         private readonly IConverterService converter;
 
+        [PluginActivated]
+        public void Activated()
+        {
+            // We can access any PluginService here!
+            // Or do some logging
+            Console.WriteLine("I was activated!");
+        }
+
         // The Contract method we need to implement
         public async Task<IEnumerable<WeatherForecast>> GetWeatherFor(string location)
         {
