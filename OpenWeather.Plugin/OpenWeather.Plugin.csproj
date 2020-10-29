@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Prise.Plugin" Version="2.0.0-beta7" />
-    <PackageReference Include="Prise.ReverseProxy" Version="2.0.0-beta7" />
+    <PackageReference Include="Prise.Plugin" Version="2.0.0" />
+    <PackageReference Include="Prise.ReverseProxy" Version="2.0.0" />
     <PackageReference Include="AutoMapper" Version="10.1.1" />
   </ItemGroup>
 
