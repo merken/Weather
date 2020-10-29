@@ -2,6 +2,7 @@ bin
 obj
 .vscode
 .DS_Store
+_extracted
 _dist/*.dll
 _dist/*.pdb
 _dist/*.json
