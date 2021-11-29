@@ -1,8 +1,7 @@
-namespace OpenWeather.Plugin.Models
+namespace OpenWeather.Plugin.Models;
+
+public class OpenWeatherForecast
 {
-    public class OpenWeatherForecast
-    {
-        public string main { get; set; }
-        public string description { get; set; }
-    }
+    public string main { get; set; }
+    public string description { get; set; }
 }

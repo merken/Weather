@@ -1,8 +1,7 @@
-namespace OpenWeather.Plugin.Models
+namespace OpenWeather.Plugin.Models;
+
+public class OpenWeatherTemperature
 {
-    public class OpenWeatherTemperature
-    {
-        // Temperature in Kelvin
-        public decimal temp { get; set; }
-    }
+    // Temperature in Kelvin
+    public decimal temp { get; set; }
 }

@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Prise.Plugin" Version="2.0.0" />
-    <PackageReference Include="Prise.ReverseProxy" Version="2.0.0" />
+    <PackageReference Include="Prise.Plugin" Version="6.0.0" />
+    <PackageReference Include="Prise.ReverseProxy" Version="6.0.0" />
     <PackageReference Include="AutoMapper" Version="10.1.1" />
   </ItemGroup>
 

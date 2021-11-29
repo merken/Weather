@@ -11,6 +11,6 @@
         <tags></tags>
     </metadata>
     <files>
-        <file src='bin/Debug/netcoreapp3.1/publish/*.*' target='lib/netcoreapp3.1' />
+        <file src='bin/Debug/net6.0/publish/*.*' target='lib/net6.0' />
     </files>
 </package>
